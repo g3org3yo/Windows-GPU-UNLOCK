@@ -23,6 +23,7 @@ Source revisions, measurements, published artifact hashes and every audited issu
 | [#124](https://github.com/impacifist/Windows-GPU-UNLOCK/issues/124) | Gainward RTX 3090 24GB · `10de:2204` / `10b0:2204` | Gigabyte Z790 GAMING X AX / F15 / i7-13700K | LOCAL-220410de-220410b0-e4482647 USB. One logged transaction/Windows return; one capture after reset, only one full shutdown |
 | [#133](https://github.com/impacifist/Windows-GPU-UNLOCK/issues/133) | EVGA RTX 3090 Ti FTW3 Ultra 24GB · `10de:2203` / `3842:4985` | MSI PRO Z690-P DDR4 / A.20 / i7-12700K | LOCAL-220310de-49853842-79d1fad6 USB. Two logged USB boots; one manual and one default USB-first; Windows/display return |
 | [#136](https://github.com/impacifist/Windows-GPU-UNLOCK/issues/136) | MSI RTX 3090 SUPRIM 24GB · `10de:2204` / `1462:3882` | MSI MAG B650 TOMAHAWK WIFI / 1.A0 / Ryzen 7 7800X3D | LOCAL-220410de-38821462-a1201d9a USB. One logged full-shutdown transaction and both displays return; no tracked diff |
+| [#316](https://github.com/windows-GPU-UNLOCK/Windows-GPU-UNLOCK/issues/316) | MSI RTX 3090 Ventus 3X OC 24GB · `10de:2204` / `1462:3881` | ASUS TUF GAMING X570-PLUS (WI-FI) / 5021 / AM4 | LOCAL USB entryLatchedSs1Full. Logged clean transaction (FLR=1, clean=1), direct Windows 11 bootmgfw handoff, driver 621.14 loaded; PyTorch FP16 +85% / BF16 +84% / TF32 +65% (FP32 baseline), NInfer prefill +9–28% |
 
 ## New LOCAL coverage and historical fork candidates
 

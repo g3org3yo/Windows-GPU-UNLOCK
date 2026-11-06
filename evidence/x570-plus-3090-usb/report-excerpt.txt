@@ -1,0 +1,85 @@
+=== AUTO000002/REPORT.TXT (Sanitized Excerpt) ===
+HEADLESS RESEARCH: file-only log; zero physical GOP; automatic exact-card unlock; hardware untested.
+RTX3090 AUTOMATIC INTERNAL UNLOCK
+AUTO000002
+Esc cancels; exact hardware gates and one transaction only.
+BUILD MODE: AUTOMATIC INTERNAL UNLOCK; profile=entryLatchedSs1Full; Esc cancellation; all hardware gates retained.
+CHECK stage=secure-boot status=0
+CHECK stage=watchdog status=0
+PCI enumeration: status=0 handles=47
+PCI target matches=1 status=0
+target location: status=0
+config[00]=220410de 00100003 030000a1 00800010
+config[10]=fb000000 0000000c 00000070 0000000c
+config[20]=00000078 0000e001 00000000 38811462
+target BDF=0:10:0.0 checks=1 pm=0x60 pcie=0x78 msi=0x68 msix=0
+CHECK stage=target status=0
+CHECK stage=display status=0
+bar0 query: status=0
+bar0 descriptor: type=0 granularity=32 min=0xfb000000 max=0xfbffffff length=0x1000000 translation=0
+CHECK stage=bar0 status=0
+live PROM hash matched=1
+CHECK stage=prom status=0
+cold state: chip=0xb72000a1 plm=0xffffff8f gfw=0x8b8f/0x3ff/0x10 WPR2_HI=0 SS0=0x70240110 SS1=0
+cold expected: profile=entryLatchedSs1Full chip=0xb72000a1 memory=0x6000 entry_latched=0 SS0=0 SS1=0 SS0target=0x88888888 SS1policy=target entry=0 target=0x8
+cold observed: profile=entryLatchedSs1Full chip=0xb72000a1 memory=0x6000 SS0=0x70240110 SS1=0
+entry selectors: latched_once=1 SS0=0x70240110 SS1=0 SS0target=0x88888888 SS1policy=full SS1target=0x8
+EXPERIMENTAL exact-card profile entryLatchedSs1Full verified; SS0target=0x88888888 SS1policy=full entry=0 target=0x8; hardware untested.
+CHECK stage=diagnostic-cold-state status=0
+ownership: records=7 exclusive=1 status=0
+CHECK stage=ownership status=0
+CHECK stage=config-recheck status=0
+CHECK stage=bar0 status=0
+live PROM hash matched=1
+CHECK stage=prom status=0
+CHECK stage=cold-state status=0
+CHECK stage=assets status=0
+ARMED: one transaction is starting. Do not reset or remove the USB.
+claim: power=0 pm_cap=0x60 flags=0
+claim: command=0x3 capability=0x112c8de1 BAR_mask=0x1
+entry: plm=0xffffff8f ss0=0x70240110 ss1=0 wpr2_hi=0
+FWSEC: reading PROM at 0x300000
+FWSEC: PROM bytes=1048576 signature=0xaa55
+Falcon reset begin: base=0x110000
+Falcon reset done: base=0x110000 hwcfg=0x67f7 chip=0xb72000a1
+Falcon start: base=0x110000 cpuctl=0x10 code_va=0 sig_dmem=0x5a4 engine_mask=0x400 ucode=9 mailbox=0:0
+FWSEC halt observation: first=0 last=0x10 samples=3816 observed_nonhalt=1 requested_wait_us=190750 error=0
+FWSEC result: scratch=0 expected_hi16=0
+FWSEC WPR2: low=0x5ffe000 high=0x5ffee00 expected_page=0x5ffe00 end=0x5fff00000
+Falcon reset begin: base=0x840000
+Falcon reset done: base=0x840000 hwcfg=0x67f7 chip=0xb72000a1
+Falcon start: base=0x840000 cpuctl=0x10 code_va=0x100 sig_dmem=0x10 engine_mask=0x1 ucode=3 mailbox=0:0xc67e0000
+selector intent: SS0target=0x88888888 SS1entry=0 SS1target=0x8 (one SS1 write)
+pre-FLR selectors: ss0=0x88888888 expected=0x88888888 ss1=0x8 expected=0x8
+PCIe FLR begin: BME=0 DMA retained, chip=0xb72000a1
+PCIe FLR returned: result=0
+post-FLR BAR ready: chip=0xb72000a1
+post-FLR GFW result: error=0 pci=0x220410de plm=0x8b8f boot=0x3ff cpuctl=0x10 budget_us=2050000
+engine reset assert: phase=post-FLR base=0x840000 before=0 write=0x1
+engine reset propagation: phase=post-FLR base=0x840000 first=0x1 tenth=0x1
+engine reset asserted: phase=post-FLR base=0x840000 error=0 last=0x1
+engine reset release: phase=post-FLR base=0x840000 before=0x1 write=0
+engine reset released: phase=post-FLR base=0x840000 engine=0 hwcfg2=0x67f7
+post-FLR SEC2 reset released, GSP halted, BME=0 pending=0 WPR2=1ffffe00:00000000 SS0=88888888 SS1=00000008
+driver probe resources: phase=handoff empty=1
+restore streaming mask: actual=0xffffffff expected=0xffffffff
+restore coherent mask: actual=0xffffffff expected=0xffffffff
+restore PCI command: actual=0x3 original=0x3 mask=0x6
+BME containment: attribute_status=0 hardware_status=0 command=0x3 cached=0x300 pending=0
+transaction result=0 containment=0 started=1 quiesced=1 fault=0 retained=0 maps=0 FLR=1
+FINAL status=0 stage=transaction attempted=1 driver_release=0 clean=1
+
+=== HLS000002.TXT (Sanitized Excerpt) ===
+internal-handoff-v1 status=0x0000000000000000
+pre-release-cold-check status=0x0000000000000000
+pre-release-cold-ss0 status=0x0000000070240110
+gpu-console-graph-v1 observational-only; no-detach no-unlock no-nvram-write
+image-file-path-node raw=\EFI\Microsoft\Boot\bootmgfw.efi
+capture-complete=1
+full-preparation-result status=0x0000000000000000
+automatic-unlock-start-Esc-cancels status=0x0000000000000000
+original-unlock-return status=0x0000000000000000
+full-windows-start status=0x0000000000000000
+windows-preclose-verify-begin status=0x0000000000000000
+verify-complete status=0x0000000000000000
+windows-close-files-next-then-final-verify-and-StartImage status=0x0000000000000000
